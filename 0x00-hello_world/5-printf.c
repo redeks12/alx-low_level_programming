@@ -1,6 +1,9 @@
 #include <stdio.h>
-/*
- * the main function prints out the string in the pust function
+/**
+ * main - Entry point,
+ * to print string in puts function
+ * 
+ * Return: Always 0 (Success)
  */
 int main(void)
 {

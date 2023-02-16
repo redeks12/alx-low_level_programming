@@ -1,7 +1,9 @@
 #include <stdio.h>
-/*
- * the main function prints out the string in the pust function
- */
+/**
+ * main - program that prints string in puts function
+ *
+ * Return: Always return 0.
+*/
 int main(void)
 {
 	puts("\"Programming is like building a multilingual puzzle");
