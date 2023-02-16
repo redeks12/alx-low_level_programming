@@ -2,7 +2,6 @@
 /**
  * main - Entry point,
  * to print string in puts function
- * 
  * Return: Always 0 (Success)
  */
 int main(void)
