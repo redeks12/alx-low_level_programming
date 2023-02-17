@@ -1,4 +1,4 @@
-#include <stdio.h>i
+#include <stdio.h>
 #include <stdlib.h>
 /**
  * main - program that prints all leters in the alphabet
