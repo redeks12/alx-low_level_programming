@@ -4,13 +4,14 @@
  * main - program that prints all leters in the alphabet
  * Return: Always return 0.
 */
-int main(void) {
+int main(void)
+{
 	char ch = 'z';
-	       while(ch>='a')
-    {
-        putchar(ch);
-        ch--;
-    }
+	while(ch >= 'a')
+	{
+		putchar(ch);
+		ch--;
+	}
 	putchar('\n');
-	return 0;
+	return (0);
 }
