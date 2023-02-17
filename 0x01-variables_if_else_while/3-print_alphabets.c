@@ -4,19 +4,21 @@
  * main - program that prints all leters in the alphabet
  * Return: Always return 0.
 */
-int main(void) {
+int main(void)
+{
 	char ch = 'a';
-	while(ch<='z')
+
+	while (ch <= 'z')
 	{
 		putchar(ch);
 		ch++;
 	}
 	ch = 'A';
-	while(ch<='Z')
+	while (ch <= 'Z')
 	{
 		putchar(ch);
 		ch++;
 	}
 	putchar('\n');
-	return 0;
+	return (0);
 }
