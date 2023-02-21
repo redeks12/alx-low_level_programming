@@ -1,12 +1,14 @@
 #include "main.h"
 /**
- * main - program that prints all leters in the alphabet
- * Return: Always return 0.
+ * this prints out all the letters of the alphabet in order
+ * using a while loop and the putchar function
+ * 
 */
 void print_alphabet(void)
 {
 	char a = 'a';
-	while(a <= 'z')
+
+	while (a <= 'z')
 	{
 		_putchar(a);
 		a++;
