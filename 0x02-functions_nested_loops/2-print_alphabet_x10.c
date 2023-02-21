@@ -1,32 +1,22 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include "main.h"
 /**
- * main - program that prints all leters in the alphabet
- * Return: Always return 0.
+ * print_alphabet_x10 - this prints out all the letters of the alphabet in order ten times
+ * using a nested while loop and the putchar function
 */
-void print_alphabet_x10(void);
-int main(void){
-
-        print_alphabet_x10();
-        return (0);
-}
-
-
 void print_alphabet_x10(void)
 {
-        int i = 0;
+	char i = 0;
 
-        while(i <= 10)
-        {
-            char a = 'a';
-             while(a <= 'z');
-             {
-                 putchar(a);
-                 a++;
-             }
-             i++;
-             putchar('\n');
-        }
+	while (i <= 10)
+	{
+		char a = 'a';
+
+		while (a <= 'z')
+		{
+			_putchar(a);
+			a++;
+		}
+		i++;
+		_putchar('\n');
+	}
 }
-
