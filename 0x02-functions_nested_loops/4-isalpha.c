@@ -1,9 +1,9 @@
 #include "main.h"
 /**
- * print_alphabet_x10 - this prints out all the letters of the alphabet
- * in order ten times
- * using a nested while loop and the putchar function
-*/
+ * _isalpha - a function that checks for alphabetic character
+ * @c: single letter input
+ * Return: 1 if c is a letter (lower or uppercase), 0 otherwise
+ */
 int _isalpha(int c)
 {
 	if (c >= 65 && c <= 122)
@@ -11,6 +11,6 @@ int _isalpha(int c)
 		return (1);
 	} else
 	{
-		return(0);
+		return (0);
 	}
 }
