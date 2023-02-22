@@ -1,10 +1,20 @@
 #include "main.h"
 /**
- * int print_last_digit(int) - this prints out all the letters of the alphabet
- * in order ten times
- * using a nested while loop and the putchar function
-*/
-int print_last_digit(int l)
+ * print_last_digit - a function that prints the last digit of a number
+ * @nld: number's last digit result
+ * Return: value of the last digit
+ */
+int print_last_digit(int nld)
 {
-	return (l);
+	int pld;
+
+	pld = (nld % 10);
+
+	if (pld < 0)
+	{
+		pld = (-1 * pld);
+	}
+
+	_putchar(pld + '0');
+	return (pld);
 }

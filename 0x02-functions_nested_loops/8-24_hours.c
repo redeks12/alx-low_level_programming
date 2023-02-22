@@ -1,33 +1,25 @@
 #include "main.h"
 /**
- * print_alphabet_x10 - this prints out all the letters of the alphabet
- * in order ten times
- * using a nested while loop and the putchar function
-*/
+ * jack_bauer - function that prints every minute of the day, 24 hour clock
+ * h = hour, m = minutes
+ * / 10 allows second digit to rotate
+ * for loop breaks before passing 24:00
+ * Return: 24 hour clock line by line
+ */
 void jack_bauer(void)
 {
-	int i;
-	int j,k,l;
+	int h, m;
 
-	for (i = 0; i <= 2; i++)
+	for (h = 0; h < 24; h++)
 	{
-		for (j = 0; j <= 9; j++)
+		for (m = 0; m < 60; m++)
 		{
-			if((i <= 1 && j <= 9) || (i <= 2 && j <= 3))
-			{
-				for (k = 0; k <= 5; k++)
-				{
-					for (l = 0; l <= 9; l++)
-					{
-						_putchar(i + '0');
-						_putchar(i + '0');
-						_putchar(':');
-						_putchar(k + '0');
-						_putchar(l + '0');
-						_putchar('\n');
-					}
-				}
-                        }
-                }
-        }
+			_putchar((h / 10) + '0');
+			_putchar((h % 10) + '0');
+			_putchar(':');
+			_putchar((m / 10) + '0');
+			_putchar((m % 10) + '0');
+			_putchar('\n');
+		}
+	}
 }
