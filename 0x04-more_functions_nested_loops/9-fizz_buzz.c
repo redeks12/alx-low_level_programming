@@ -1,4 +1,3 @@
-#include "main.h"
 #include <stdio.h>
 /*
  * main - function prints out 1 - 100 but with a twist
@@ -26,9 +25,9 @@ int main(void)
 		{
 			printf("%d", i);
 		}
-		_putchar(' ');
+		putchar(' ');
 	}
-	_putchar('\n');
+	putchar('\n');
 
 	return (0);
 }
