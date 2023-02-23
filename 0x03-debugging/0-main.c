@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "main.h"
 /*
  * main - tests the positive negative function with value 0 */
