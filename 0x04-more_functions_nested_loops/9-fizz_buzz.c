@@ -3,7 +3,6 @@
 /*
  * main - function prints out 1 - 100 but with a twist
  * return 0 */
-
 int main(void)
 {
 	int i;
