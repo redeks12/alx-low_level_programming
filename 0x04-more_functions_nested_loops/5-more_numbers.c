@@ -17,15 +17,12 @@ void more_numbers(void)
 		{
 			if (p < 10)
 			{
-				_putchar(p + '0');
-			}
-			else
-			{
 				_putchar(1 + '0');
-				_putchar((p % 10) + '0');
 			}
+			_putchar((p % 10) + '0');
 			p++;
 		}
+		_putchar('\n');
 		p = 0;
 		n++;
 	}
