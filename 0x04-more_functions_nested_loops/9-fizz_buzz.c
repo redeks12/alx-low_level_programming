@@ -1,5 +1,5 @@
 #include "main.h"
-#include <stdio>
+#include <stdio.h>
 /*
  * main - function prints out 1 - 100 but with a twist
  * return 0 */
@@ -15,11 +15,11 @@ int main(void)
 		{
 			printf("FizzBuzz");
 		}
-		else if (i % 5 = 0)
+		else if (i % 5 == 0)
 		{
 			printf("Buzz");
 		}
-		else if (i % 3 = 0)
+		else if (i % 3 == 0)
 		{
 			printf("Fizz");
 		}
