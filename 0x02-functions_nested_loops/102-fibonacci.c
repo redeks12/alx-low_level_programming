@@ -12,12 +12,12 @@ int main(void)
 	long fn_1 = 1;
 	long fn_2 = 0;
 
-	for (i = 1; i <= 100; i++)
+	for (i = 1; i <= 50; i++)
 	{
 		fibo = fn_1 + fn_2;
 		fn_2 = fn_1;
 		fn_1 = fibo;
-		if (i < 100)
+		if (i < 50)
 		{
 			printf("%ld, ", fibo);
 		}
