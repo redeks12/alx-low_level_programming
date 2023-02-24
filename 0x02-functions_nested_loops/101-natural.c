@@ -1,23 +1,27 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * print_all - a function that prints all natural numbers 1024
- * that are divisible by 3 or 5
- * user input's number prints to 98, regardless < 98 or > 9
+ * main - prints the multiples of 5 and 3
+ *
+ *
+ * Return: the sum
  */
-void print_all(void)
+int main(void)
 {
-	int n = 0;
-	int j = 0;
+	int i, n = 1024;
+	int sum;
 
-	while (n < 1024)
+	for (i = 1; i < n; i++)
 	{
-		if(n % 3 == 0 || n % 5 == 0)
+		if ((i % 3) == 0 || (i % 5) == 0)
 		{
-			j+= n;
+			sum = sum + i;
 		}
-		n++;
+		else
+		{
+			sum = sum + 0;
+		}
 	}
-	printf("%d",j);
-	printf("\n");
+	printf("%i\n", sum);
+	return (0);
 }

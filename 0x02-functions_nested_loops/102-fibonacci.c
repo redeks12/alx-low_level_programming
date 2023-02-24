@@ -1,25 +1,31 @@
 #include <stdio.h>
-#include "main.h"
 /**
- * fibonacci -  a function that prints the first 50 numberss, starting with 1
- * @n - is the number that is being multiplied
- * rone = row, cone = column, d = digits of current result
- * Return: times table
+ * main - print the 50 first fibonacci numbers
+ *
+ *
+ * Return: the series
  */
-void fibonacci(void)
+int main(void)
 {
-		int rone, k;
-		int i = 1;
-		int j = 2;
+	int i;
+	long fibo = 0;
+	long fn_1 = 1;
+	long fn_2 = 0;
 
-		printf("%d, %d, ", i,j);
-		for (rone = 0; rone < 48; rone++)
+	for (i = 1; i <= 100; i++)
+	{
+		fibo = fn_1 + fn_2;
+		fn_2 = fn_1;
+		fn_1 = fibo;
+		if (i < 100)
 		{
-			k = i + j;
-			printf("%d",k);
-			i = j;
-			j = k;
-			if(rone < 47)
-				printf(", ");
+			printf("%ld, ", fibo);
 		}
+		else
+		{
+			printf("%ld", fibo);
+		}
+	}
+	printf("\n");
+	return (0);
 }

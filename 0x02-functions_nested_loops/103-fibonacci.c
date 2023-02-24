@@ -1,26 +1,28 @@
 #include <stdio.h>
-#include "main.h"
 /**
- * fibonacci -  a function that prints out the sum of all even numbers in fibonacci spiral
- * @n - is the number that is being multiplied
- * rone = row, cone = column, d = digits of current result
- * Return: times table
+ * main - Prints the sum of even-valued Fibonacci sequence
+ *        terms not exceeding 4000000.
+ *
+ * Return: Always 0.
  */
-void fibonacci(void)
+int main(void)
 {
-	int rone, k,sum = 0;
-	int i = 1;
-	int j = 2;
+	unsigned long fib1 = 0, fib2 = 1, fibsum;
+	float tot_sum;
 
-	while(k < 4000000)
+	while (1)
 	{
-		k = i + j;
-		j = k;
-		i = j;
-		if (k % 2 == 0)
-		{
-			sum+= k;
-		}
+		fibsum = fib1 + fib2;
+		if (fibsum > 4000000)
+			break;
+
+		if ((fibsum % 2) == 0)
+			tot_sum += fibsum;
+
+		fib1 = fib2;
+		fib2 = fibsum;
 	}
-	printf("%d", sum + 2);
+	printf("%.0f\n", tot_sum);
+
+	return (0);
 }
