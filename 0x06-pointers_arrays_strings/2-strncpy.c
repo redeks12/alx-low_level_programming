@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 /*
  * _strncpy - takes in 3 arguments and copies the 2 to first one
  * @dest - first arguments 
