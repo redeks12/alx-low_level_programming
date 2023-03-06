@@ -4,7 +4,7 @@
  * @s : first str
  * @b : second str
  * @n : integer
- * Return : s
+ * Return : Always s
  */
 char *_memset(char *s, char b, unsigned int n)
 {
