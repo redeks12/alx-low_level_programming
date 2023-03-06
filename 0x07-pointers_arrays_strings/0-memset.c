@@ -1,10 +1,10 @@
 #include "main.h"
 /**
  * *_memset - function takes fills n amt
- * @s - first str
- * @b - second str
- * @n - integer
- * return - s
+ * @*s : first str
+ * @*b : second str
+ * @*n : integer
+ * Return : s
  */
 char *_memset(char *s, char b, unsigned int n)
 {
