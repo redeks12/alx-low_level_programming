@@ -9,7 +9,7 @@ int main(int argc, int *argv[])
 {
 	if (argc == 2)
 	{
-		printf("%d\n", argv[0] * argv[1]);
+		printf("%d\n", *argv[0] * *argv[1]);
 	}
 	else
 	{
