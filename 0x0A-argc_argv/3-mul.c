@@ -1,15 +1,16 @@
 #include <stdio.h>
+#include <stdlib.h>
 /**
  * main - Prints the program name, followed by a new line.
  * @argc : first argument
  * @*argv[] : second argument
  * return : 0
  */
-int main(int argc, int *argv[])
+int main(int argc, char *argv[])
 {
 	if (argc == 2)
 	{
-		printf("%d\n", *argv[0] * *argv[1]);
+		printf("%d\n", atoi(argv[0]) * atoi(argv[1]));
 	}
 	else
 	{
