@@ -7,9 +7,9 @@
  * return: array */
 char *_strdup(char *str)
 {
-        if (str == NULL) return NULL;
         char *arr = malloc(sizeof(str) + 1);
         
+        if (str == NULL) return NULL;
         arr = str;
         return arr;
 }
