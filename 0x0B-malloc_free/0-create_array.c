@@ -8,7 +8,7 @@
  * return: array */
 char *create_array(unsigned int size, char c)
 {
-        int i;
+        unsigned int i;
         char *arr = malloc(sizeof(char) * size);
 
         if (!size) return NULL;
