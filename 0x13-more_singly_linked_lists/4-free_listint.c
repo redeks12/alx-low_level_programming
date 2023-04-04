@@ -3,8 +3,8 @@
 
 void free_listint(listint_t *head)
 {
-        listint_t *temp = (listint_t*)malloc(sizeof(listint_t));
-        listint_t *temp2 = (listint_t*)malloc(sizeof(listint_t));
+        listint_t *temp;
+        listint_t *temp2;
         temp = head;
 
         if (temp == NULL)
