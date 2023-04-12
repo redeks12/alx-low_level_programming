@@ -1,20 +1,24 @@
 #include "main.h"
 #include <unistd.h>
+#include <fcntl.h>
 
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-        size_t i = 0;
-        char bo[50];
-        FILE *nan;
-        if (filename == NULL)
+        ssize_t b;
+        int fd, wrote;
+        char buff[1024];
+        if (!filename || !letters)
                 return (0);
-        nan = fopen(filename,"r");
-        while (!feof(nan) && i != letters)
-        {        
-                fgets(bo, 50, nan);
-                printf("%s",bo);
-                i++;
-        }
-        fclose(nan);
-        return (letters);
+        fd = open(filename, O_RDONLY);
+        if (fd == -1)
+                return (-1);
+        b = read(fd, buff, letters);
+        if (b == -1)
+                return (-1);
+        buff[b] = '\0';
+        wrote = write(STDOUT_FILENO, buff, b);
+        if (wrote != b)
+                return (0);
+        close(fd);
+        return (b);
 }
