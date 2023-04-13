@@ -23,10 +23,16 @@ int main(int ac, char **av)
     if (first == -1)
     {
         fprintf(stderr, "error: %s", av[1]);
+        exit(98);
     }
     
     second = open(av[2], O_WRONLY | O_CREAT | O_TRUNC, 664);        
 
+    if (second == -1)
+    {
+        fprintf(stderr, "Error: Can't write to %s", av[2]);
+        exit(99);
+    }
     do
     {    
         r = read(first, buff, BUFFER_SIZE);
