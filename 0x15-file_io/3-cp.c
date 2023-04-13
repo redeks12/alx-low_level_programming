@@ -10,25 +10,45 @@
  */
 int main(int ac, char **av)
 {
-    int first, r;
+    int first,wrote, r;
     int second;
     char buff[BUFFER_SIZE];
 
     if (ac != 3)
     {
-        fprintf(stderr, "Usage: cp %s %s\n", av[1], av[2]);
+        fprintf(stderr, "Usage: cp file_from file_to");
         exit(97);
     }
-
     first = open(av[1], O_RDONLY);
-    r = read(first, buff, BUFFER_SIZE);
+    if (first == -1)
+    {
+        fprintf(stderr, "error: %s", av[1]);
+    }
+    
+    second = open(av[2], O_WRONLY | O_CREAT | O_TRUNC, 664);        
+
+    do
+    {    
+        r = read(first, buff, BUFFER_SIZE);
+        if (r == -1)
+        {
+            fprintf(stderr, "error");
+            exit(98);
+        }
+        
+
+       wrote = write(second, buff, r);
+        if (wrote == -1)
+        {
+            fprintf(stderr, "Error: Can't write to %s", av[2]);
+            exit(99);
+        }
+    } while (r > 0);
+    
     buff[r] = '\0';
-    close(first);
 
-    second = open(av[2], O_WRONLY | O_CREAT | O_TRUNC, 664);
-    write(second, buff, r);
     close(second);
-
+    close(first);
 
 
     return (0);
