@@ -47,9 +47,16 @@ int main(int ac, char **av)
     
     buff[r] = '\0';
 
-    close(second);
-    close(first);
-
+    if (close(second) > 0)
+    {
+        fprintf(stderr, "Error: Can't write to %s", av[2]);
+        exit(100);
+    }
+     if (close(first) > 0)
+    {
+        fprintf(stderr, "Error: Can't write to %s", av[1]);
+        exit(100);
+    }
 
     return (0);
 }
