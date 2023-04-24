@@ -1,31 +1,27 @@
 #include "main.h"
-
-int append_text_to_file(const char *filename, char *text_content)
-{
-        int nan;
-
-        nan = open(filename, O_WRONLY | O_APPEND);
-
-        if ((nan == -1) || (filename == NULL))
-                return (-1);   
-                     
-        if (text_content != NULL)
-                write(nan, text_content, _strlen(text_content));
-        close(nan);
-        return (1);
-}
-
 /**
- * _strlen - Fnction that returns the length of a string
- * @s: string to check
- * Return: 0 (Success)
+ * create_file - Creates a file.
+ * @filename: A pointer to the name of the file to create.
+ * @text_content: A pointer to a string to write to the file.
+ *
+ * Return: If the function fails - -1.
+ *         Otherwise - 1.
  */
-
-int _strlen(char *s)
+int create_file(const char *filename, char *text_content)
 {
-	int length = 0;
+	int file_descriptor, bytes_written, content_len = 0;
 
-	for (; *s++;)
-		length++;
-	return (length);
+	if (filename == NULL)
+		return (-1);
+	if (text_content != NULL)
+	{
+		for (content_len = 0; text_content[content_len];)
+			content_len++;
+	}
+	file_descriptor = open(filename, O_CREAT | O_RDWR | O_TRUNC, 0600);
+	bytes_written = write(file_descriptor, text_content, content_len);
+	if (file_descriptor == -1 || bytes_written == -1)
+		return (-1);
+	close(file_descriptor);
+	return (1);
 }
