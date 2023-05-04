@@ -4,6 +4,7 @@
  * @b: string to convert
  *
  * Return: Number, or 0 if b is nan
+ * description - translate binary
  */
 unsigned int binary_to_uint(const char *b)
 {
