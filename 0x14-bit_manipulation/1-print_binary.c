@@ -18,9 +18,9 @@ void print_binary(unsigned long int n)
 		if (flag)
 		{
 			num = tmpn + '0';
-			write(1, &num, 1);
+			_putchar(num);
 		}
 	}
 	if (n == 0)
-		write(1, "0", 1);
+		_putchar('0');
 }
