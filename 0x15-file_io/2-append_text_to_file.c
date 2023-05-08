@@ -1,20 +1,25 @@
 #include "main.h"
-
+/**
+ * append_text_to_file - adds contents to file
+ * @filename: the name of file
+ * @text_content: the text to be added
+ * Return: 1 or -1
+ */
 int append_text_to_file(const char *filename, char *text_content)
 {
-        int nan;
+	int nan;
 
-        nan = open(filename, O_WRONLY | O_APPEND);
+	nan = open(filename, O_WRONLY | O_APPEND);
 
-        if ((nan == -1) || (filename == NULL))
-                return (-1);   
-                     
-        if (text_content != NULL)
-                write(nan, text_content, _strlen(text_content));
-        close(nan);
-        return (1);
+	if ((nan == -1) || (filename == NULL)
+		return (-1);
+
+	if (text_content != NULL)
+		write(nan, text_content, _strlen(text_content));
+
+	close(nan);
+	return (1);
 }
-
 /**
  * _strlen - Fnction that returns the length of a string
  * @s: string to check
