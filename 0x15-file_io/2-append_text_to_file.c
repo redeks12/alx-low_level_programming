@@ -1,31 +1,27 @@
 #include "main.h"
-
+/**
+ * append_text_to_file - Append text at the end of  file.
+ * @text_content: string to add to end of the file.
+ * @filename: pointer to the name of file.
+ * Return: If the function fails -1.
+ *         If the file does not exist -1. O/W - 1.
+ */
 int append_text_to_file(const char *filename, char *text_content)
 {
-        int nan;
+	int op, wr, length = 0;
 
-        nan = open(filename, O_WRONLY | O_APPEND);
+	if (filename == NULL)
+		return (-1);
+	if (text_content != NULL)
+	{
+		for (length = 0; text_content[length];)
+			length++;
+	}
+	op = open(filename, O_WRONLY | O_APPEND);
+	wr = write(op, text_content, length);
 
-        if ((nan == -1) || (filename == NULL))
-                return (-1);   
-                     
-        if (text_content != NULL)
-                write(nan, text_content, _strlen(text_content));
-        close(nan);
-        return (1);
-}
-
-/**
- * _strlen - Fnction that returns the length of a string
- * @s: string to check
- * Return: 0 (Success)
- */
-
-int _strlen(char *s)
-{
-	int length = 0;
-
-	for (; *s++;)
-		length++;
-	return (length);
+	if (op == -1 || wr == -1)
+		return (-1);
+	close(op);
+	return (1);
 }
