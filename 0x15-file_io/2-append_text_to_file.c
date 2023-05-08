@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * append_text_to_file - Append text at the end of  file.
  * @text_content: string to add to end of the file.
