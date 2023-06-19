@@ -1,20 +1,20 @@
-unsigned int mul(unsigned int a, unsigned int b)
+int mul(int a, int b)
 {
         return a * b;
 }
-unsigned int add(unsigned int a, unsigned int b)
+int add(int a, int b)
 {
         return a + b;
 }
-unsigned int sub(unsigned int a, unsigned int b)
+int sub(int a, int b)
 {
         return a - b;
 }
-unsigned int div(unsigned int a, unsigned int b)
+int div(int a, int b)
 {
         return a / b;
 }
-unsigned int mod(unsigned int a, unsigned int b)
+int mod(int a, int b)
 {
         return a % b;
 }
