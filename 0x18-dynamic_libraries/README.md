@@ -1,1 +1,1 @@
-omo
+static
